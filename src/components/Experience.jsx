@@ -23,7 +23,7 @@ export const Experience = () => {
         ref={cube}
         name="cube"
         restitution={0.1}
-        onContactForce={({ other }) => {
+        onCollisionEnter={({ other }) => {
           if (other.rigidBodyObject.name === "floor" && mainCube.current) {
             console.log("making contact");
             mainCube.current = false;
